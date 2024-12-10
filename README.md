@@ -3,7 +3,7 @@
 
 
 The Dependencies i use on this Project are:
-
+<li>
 djangorestframework
 pillow
 PyMySQL
@@ -12,6 +12,6 @@ pandas
 numpy
 django-jazzmin
 cryptography
-
+</li>
 
 
