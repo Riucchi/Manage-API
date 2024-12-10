@@ -1,0 +1,8 @@
+djangorestframework
+pillow
+PyMySQL
+python-decouple
+pandas
+numpy
+django-jazzmin
+cryptography
