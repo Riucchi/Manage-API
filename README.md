@@ -25,7 +25,7 @@ The Dependencies i use on this Project are:
 </p>
 
 
-<h1>'api/editar-distribuidores/<int:pk>'</h1>
+<h1>'api/editar-distribuidores/<int:pk>/'</h1>
 
 <p>
   this endpoint is for a Put request with the id of the instance that u wanna edit, if the ID is valid you will get the object that you edited as Response.
@@ -50,7 +50,7 @@ The Dependencies i use on this Project are:
 </p>
 
 
-<h1>'editar-distriubidor/<int:pk>'</h1>
+<h1>'editar-distriubidor/<int:pk>/'</h1>
 
 <p>
   this endpoint is for a Put request with the id of the instance that u wanna edit, if the ID is valid you will get the object that you edited as Response.
