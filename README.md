@@ -3,15 +3,15 @@
 
 
 The Dependencies i use on this Project are:
-<li>
-djangorestframework
-pillow
-PyMySQL
-python-decouple
-pandas
-numpy
-django-jazzmin
-cryptography
-</li>
+
+<li>djangorestframework</li>
+<li>pillow</li>
+<li>PyMySQL</li>
+<li>python-decouple</li>
+<li>pandas</li>
+<li>numpy</li>
+<li>django-jazzmin</li>
+<li>cryptography</li>
+
 
 
