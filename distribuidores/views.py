@@ -1,5 +1,5 @@
 from rest_framework.views import APIView
-from rest_framework.generics import ListAPIView
+from rest_framework.generics import ListAPIView, CreateAPIView
 from rest_framework.response import Response
 from rest_framework import status
 from .models import Distribuidores, Distribuidor
@@ -10,6 +10,7 @@ class DistribuidoresListView(ListAPIView):
     serializer_class = DistribuidoresSerializer
         
 
+class DistribuidoresDeleteView(APIView):
 
     def delete(self, request, pk):
         try:
@@ -22,8 +23,6 @@ class DistribuidoresListView(ListAPIView):
         
         except Exception as e:
             return Response({"Error": str(e)}, status=status.HTTP_400_BAD_REQUEST)
-
-
 
 class DistribuidoresPutView(APIView):
 
@@ -45,20 +44,9 @@ class DistribuidoresPutView(APIView):
 
 
 
-class DistribuidoresPostView(APIView):
-
-
-    def post(self, request):
-        try:
-            serializer = DistribuidoresSerializer(data=request.data)
-            if serializer.is_valid():
-                serializer.save()
-                return Response(serializer.data, status=status.HTTP_201_CREATED)
-            else:
-                return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-            
-        except Exception as e:
-            return Response({"Error": str(e)}, status=status.HTTP_400_BAD_REQUEST)
+class DistribuidoresPostView(CreateAPIView):
+    queryset = Distribuidores.objects.all()
+    serializer_class = DistribuidoresSerializer
 
 
 
@@ -67,18 +55,9 @@ class DistribuidorListView(ListAPIView):
     serializer_class = DistribuidorSerializer
     
 
-class DistribuidorPostView(APIView):
-
-    def post(self, request):
-        try:
-            serializer = DistribuidorSerializer(data=request.data)
-            if serializer.is_valid():
-                serializer.save()
-                return Response(serializer.data, status=status.HTTP_201_CREATED)
-            else:
-                return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-        except Exception as e:
-            return Response({"Error": str(e)}, status=status.HTTP_400_BAD_REQUEST)
+class DistribuidorPostView(CreateAPIView):
+    queryset = Distribuidor.objects.all()
+    serializer_class = DistribuidorSerializer
 
 
 

@@ -1,7 +1,7 @@
 from django.db import models
 
 from distribuidores.models import Producto
-# Create your models here.
+
 
 
 

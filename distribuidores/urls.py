@@ -1,6 +1,6 @@
 
 from django.urls import path 
-from .views import DistribuidoresListView, DistribuidoresPutView, DistribuidoresPostView, DistribuidorListView, DistribuidorPostView, DistribuidorPutView
+from .views import DistribuidoresListView, DistribuidoresPutView, DistribuidoresPostView, DistribuidorListView, DistribuidorPostView, DistribuidorPutView, DistribuidoresDeleteView
 
 
 urlpatterns = [
@@ -10,4 +10,5 @@ urlpatterns = [
     path('lista/distribuidor', DistribuidorListView.as_view(), name='lista-distribuidor'),
     path('crear-nuevo-distribuidor/', DistribuidorPostView.as_view(), name='nuevo-distribuidor'),
     path('editar-distriubidor/<int:pk>', DistribuidorPutView.as_view(), name='editar-distribuidor'),
+    path('eliminar-distribuidores/<int:pk>', DistribuidoresDeleteView.as_view(), name='eliminar-distribuidores'),
 ]
