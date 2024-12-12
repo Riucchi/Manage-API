@@ -17,7 +17,7 @@ import os
 @receiver(post_save, sender=Producto)
 def export_to_excel(sender, instance, created, **kwargs):
     wb = Workbook()
-    ws = wb.active  # Accede a la hoja activa de manera explícita
+    ws = wb.active  
     ws.title = "Distribuidores-Distribuidor-Productos"
 
     if sender == Distribuidor:
