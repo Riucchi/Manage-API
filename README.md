@@ -12,8 +12,8 @@ The Dependencies i use on this Project are:
 <li>numpy</li>
 <li>django-jazzmin</li>
 <li>cryptography</li>
-
-
+<li>openpyxl</li>
+<li>drf-yasg</li>
 
 
 
