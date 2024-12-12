@@ -34,6 +34,15 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+SWAGGER_SETTINGS = {
+    'SECURITY_DEFINITIONS': {
+        'Bearer': {
+            'type': 'apiKey',
+            'name': 'Authorization',
+            'in': 'header'
+        }
+    }
+}
 
 INSTALLED_APPS = [
     'jazzmin',
@@ -44,6 +53,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'drf_yasg',
     'stock',
     'distribuidores',
     

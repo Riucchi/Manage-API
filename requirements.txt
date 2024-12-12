@@ -6,3 +6,5 @@ pandas
 numpy
 django-jazzmin
 cryptography
+openpyxl
+drf-yasg
